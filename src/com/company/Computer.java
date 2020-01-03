@@ -4,11 +4,6 @@ import java.util.Random;
 
 public class Computer {
 
-    //Ball 판별여부
-    public static boolean isBall(int num1, int num2){
-        return num1 != num2;
-    }
-
     //Strike 판별여부
     public static boolean isStrike(int num1 ,int num2){
         return num1 == num2;
@@ -23,5 +18,10 @@ public class Computer {
             answerNum[i] = tmp;
         }
     }
+
+
+    
+
+
 
 }
