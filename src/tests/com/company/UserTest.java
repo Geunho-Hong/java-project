@@ -17,6 +17,9 @@ public class UserTest {
     public void input(){
         int[] arr = new int[3];
         arr = user.input();
+        for(int num:arr){
+            System.out.print(num +" ");
+        }
     }
 
     @Test

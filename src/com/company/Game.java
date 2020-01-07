@@ -4,16 +4,11 @@ import java.util.Scanner;
 
 public class Game {
 
-    public void startGame(){
-        while (true) {
-            Scanner sc = new Scanner(System.in);
-            System.out.print("숫자를 입력해주세요");
-            int num = sc.nextInt();
+    private User user = new User();
 
-            if(reply()){
-                break;
-            }
-        }
+    public void startGame(){
+        user = new User();
+        user.input();
     }
 
     public static boolean reply() {

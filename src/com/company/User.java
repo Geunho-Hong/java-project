@@ -4,15 +4,19 @@ import java.util.Scanner;
 
 public class User {
 
+    private Computer computer = new Computer();
+
     //게임 플레이어 3자리수 입력받기
     public int[] input(){
-
         Scanner sc  = new Scanner(System.in);
+        computer = new Computer();
+
         int [] userNum  = new int[3];
+
         while(true){
             System.out.print("숫자를 입력해주세요:");
             int num = sc.nextInt();
-            if(isNumberCheck(num)){
+            if(!isNumberCheck(num)){
                 System.out.print("자릿수가 틀렸습니다.");
                 continue;
             }
@@ -50,14 +54,6 @@ public class User {
         }
         return flag;
     }
-
-
-
-
-
-
-
-
 
 
 }
