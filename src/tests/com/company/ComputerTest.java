@@ -40,9 +40,9 @@ public class ComputerTest {
     public void isCheckNumber(){
         //2 ball 1 Strike
         int answer[] = {3,4,5};
-        int input[] = {4,3,5};
+        int input[] = {4,3,1};
         int ballCnt[] = new int[2];
-        int checkArr [] = {1,2};
+        int checkArr [] = {0,2};
 
         ballCnt = computer.isCheckNumber(ballCnt,answer,input);
         assertArrayEquals(ballCnt,checkArr);
@@ -53,7 +53,5 @@ public class ComputerTest {
         int[] ballCnt = {3,0};
         assertTrue(computer.compareNumber(ballCnt));
     }
-
-
 
 }

@@ -33,8 +33,24 @@ public class UserTest {
     public void isNumberCheck(){
         boolean flag = true;
         flag = user.isNumberCheck(123);
-        assertEquals(flag,true);
+        assertTrue(flag);
     }
+
+    @Test
+    public void isNumberDifferent(){
+        boolean flag = true;
+        flag = user.isNumberDifferent(463);
+        assertTrue(flag);
+    }
+
+    @Test
+    public void isValidateNumber(){
+        boolean flag = true;
+        flag = user.isValidateNumber(324);
+        assertTrue(flag);
+    }
+
+
 
 
 

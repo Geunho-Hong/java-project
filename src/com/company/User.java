@@ -9,19 +9,20 @@ public class User {
     //게임 플레이어 3자리수 입력받기
     public int[] input(){
         Scanner sc  = new Scanner(System.in);
-        computer = new Computer();
-
-        int [] userNum  = new int[3];
+        int num = 0;
+        int[] userNum = new int[3];
 
         while(true){
             System.out.print("숫자를 입력해주세요:");
-            int num = sc.nextInt();
-            if(!isNumberCheck(num)){
-                System.out.print("자릿수가 틀렸습니다.");
-                continue;
+            num = sc.nextInt();
+
+            if(isValidateNumber(num)){
+                break;
             }
-            userNum = saveDigit(num);
+            System.out.println("서로 다른 세자리 수를 입력하세요");
         }
+        userNum = saveDigit(num);
+        return userNum;
     }
 
     //자릿수 저장하기
@@ -53,6 +54,25 @@ public class User {
             flag = false;
         }
         return flag;
+    }
+
+    //서로 다른 숫자를 입력해야 True를 Return 한다
+    public boolean isNumberDifferent(int num){
+
+        boolean checkNumber = false;
+        int[] numArr = saveDigit(num);
+        int num1 = numArr[0];
+        int num2 = numArr[1];
+        int num3 = numArr[2];
+        if(num1!=num2 && num1!=num3 && num2!=num3){
+            checkNumber = true;
+        }
+        return checkNumber;
+    }
+
+    //숫자 확인
+    public boolean isValidateNumber(int num){
+        return isNumberCheck(num) && isNumberDifferent(num);
     }
 
 
