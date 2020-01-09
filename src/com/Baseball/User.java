@@ -1,4 +1,4 @@
-package com.company;
+package com.Baseball;
 
 import java.util.Scanner;
 
@@ -70,10 +70,26 @@ public class User {
         return checkNumber;
     }
 
+    // Zero 가 입력되면 안된다
+    public boolean isNotZero(int num){
+
+        boolean checkZero = false;
+        int [] numArr = saveDigit(num);
+        int num1 = numArr[0];
+        int num2 = numArr[1];
+        int num3 = numArr[2];
+
+        if(num1 !=0 && num2 !=0 && num3!=0) {
+            checkZero = true;
+        }
+        return checkZero;
+    }
+
     //숫자 확인
     public boolean isValidateNumber(int num){
-        return isNumberCheck(num) && isNumberDifferent(num);
+        return isNumberCheck(num) && isNumberDifferent(num) && isNotZero(num);
     }
+
 
 
 }

@@ -1,4 +1,4 @@
-package com.company;
+package com.Baseball;
 
 import java.util.ArrayList;
 
@@ -16,7 +16,7 @@ public class Computer {
         if (ballCnt[1] == 0 && ballCnt[0] != 0) {
             System.out.println(ballCnt[0] + "스트라이크");
             if (ballCnt[0] == 3) {
-                System.out.println("정답입니다 !");
+                System.out.println("3개의 숫자를 모두 맞추셨습니다 ! 게임 종료");
                 checkAnswer = true;
             }
         }
@@ -73,15 +73,16 @@ public class Computer {
 
     //랜덤 값을 만들어낸다
     public void createNum(int[] answerNum) {
-
+        int tmp = 0, cnt = 0;
         ArrayList<Integer> checkList = new ArrayList<>();
-        int tmp = 0;
 
-        for (int i = 0; i < answerNum.length; i++) {
-            tmp = (int) (Math.random() * 9) + 1; //1부터 9까지의 수 생성
-            if (!checkList.contains(tmp) && tmp!=0) {
-                answerNum[i] = tmp;
+        while (cnt <= 2) {
+            tmp  = (int)(Math.random()*9)+1; //1부터 9까지 수 생성
+
+            if(!checkList.contains(tmp)){
+                answerNum[cnt] = tmp;
                 checkList.add(tmp);
+                cnt++;
             }
         }
     }

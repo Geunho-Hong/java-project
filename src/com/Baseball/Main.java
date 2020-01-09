@@ -1,16 +1,17 @@
-package com.company;
+package com.Baseball;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
-
         while(true){
             Game game = new Game();
             game.startGame();
 
+            if(reply()){
+                break;
+            }
         }
-
     }
 
     public static boolean reply() {

@@ -1,4 +1,4 @@
-package com.company;
+package com.Baseball;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -47,6 +47,13 @@ public class UserTest {
     public void isValidateNumber(){
         boolean flag = true;
         flag = user.isValidateNumber(324);
+        assertTrue(flag);
+    }
+
+    @Test
+    public void isNotZero(){
+        boolean flag = true;
+        flag = user.isNotZero(324);
         assertTrue(flag);
     }
 

@@ -1,4 +1,4 @@
-package com.company;
+package com.Baseball;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -29,10 +29,10 @@ public class ComputerTest {
     }
 
     @Test
-    public void isBall(){
-        int [] answer = {5,1,4};
-        int [] input = {2,3,5};
-        boolean flag = computer.isBall(answer,input,2);
+    public void isBall() {
+        int[] answer = {5, 1, 4};
+        int[] input = {2, 3, 5};
+        boolean flag = computer.isBall(answer, input, 2);
         assertTrue(flag);
     }
 
