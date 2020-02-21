@@ -37,6 +37,42 @@ Java-project
   * ContactMain.java
   * ContactVO.java
 --------------------------------------------
+
+### (3) 독서실 관리 프로그램
+## Oracle,Swing,MVC 패턴을 이용한 Project
+
+
+1.Main
+* Library.java
+* SeatBtn.java
+
+2.View
+* Login.java
+* MyPageForm.java
+* PayDialog.java
+* SignUp.Java
+* UserInfo.java
+* UserModify.java
+
+3.Domain
+* CostDTO.java
+* DeskDTO.java
+* UserDTO.java
+
+4.DAO
+* CostDAO.java
+* CostDAOImpl.java
+* DeskDAO.java
+* DeskDAOImpl.java
+* UserDAO.java
+* UserDAOImpl.java
+
+5.Query
+* CostQuery.java
+* DeskQuery.java
+* OracleQuery.java
+* UserQuery.java
+
   
   
   
